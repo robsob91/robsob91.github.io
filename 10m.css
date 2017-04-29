@@ -1,0 +1,77 @@
+body, html {
+    background: linear-gradient(#d200ff 10%, black 15%, blue 300%);
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -5;
+    perspective: 1000px;
+    overflow: hidden
+}
+
+@keyframes fly {
+    0% {background-position: 0px 0px}
+    100% {background-position: 0px 40px}
+}
+
+.grid {
+    background: url(bkg.png) repeat;
+    position: absolute;
+    width: 300%;
+    height: 150%;
+    top: -20%;
+    left: -100%;
+    z-index: -4;
+    transform: rotateX(30deg);
+    animation: fly forwards 1s infinite linear
+}
+
+.upbox {
+    width: 35%;
+    max-width: 500px;
+    background: #000;
+    border-radius: 5px;
+    text-align: center;
+    color: #FFF;
+    border: #5479a6 solid 2px;
+    box-shadow: 0px 0px 5px blue
+
+
+}
+
+.upbox > h3 {
+    font-style: italic;
+}
+
+.hidden {
+    display: none;
+}
+
+.upload {
+    height: 4em;
+    width: 10em;
+    border: 2px gray dashed;
+    background: white;
+    color: #444444;
+    font-weight: 900;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.optbox {
+    background: #1c0521;
+    padding: 0.5em;
+    width: 300px;
+    margin: auto;
+    border: 2px solid white;
+}
+
+button {
+    border-radius: 0;
+    border: 0;
+}
